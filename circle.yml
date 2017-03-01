@@ -3,7 +3,7 @@ dependencies:
     - sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
     - sudo apt-add-repository 'deb https://dl.bintray.com/gauge/gauge-deb stable main'
     - sudo apt-get update
-    - sudo apt-get install gauge
+    - sudo apt-get install gauge=0.7.0
     - gauge_setup
     - gauge --install js
 
