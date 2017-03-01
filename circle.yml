@@ -1,0 +1,13 @@
+dependencies:
+  override:
+    - sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
+    - sudo apt-add-repository 'deb https://dl.bintray.com/gauge/gauge-deb stable main'
+    - sudo apt-get update
+    - sudo apt-get install gauge
+    - gauge_setup
+    - gauge --install js
+
+test:
+  override:
+    - mvn test
+    - cd gauge; npm test
