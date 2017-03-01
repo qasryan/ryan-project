@@ -6,8 +6,12 @@ dependencies:
     - sudo apt-get install gauge=0.7.0
     - gauge_setup
     - gauge --install js
+    - gauge --install xml-report
 
 test:
   override:
     - mvn test
     - cd src/test/gauge; npm test
+  post:
+    - cp -R src/test/gauge/reports $CIRCLE_ARTIFACTS
+    - cp -R src/test/gauge/reports/xml-report $CIRCLE_TEST_REPORTS
