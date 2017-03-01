@@ -16,8 +16,7 @@ var numberOfVowels = function (word) {
 // --------------------------
 
 gauge.step("Vowels in English language are <vowels>.", function(vowelsGiven) {
-//  assert.equal(vowelsGiven, vowels.join(""));
-	assert.equal(true, "Vowels in English language are <vowels>");
+  assert.equal(vowelsGiven, vowels.join(""));
 });
 
 gauge.step("The word <word> has <number> vowels.", function(word, number) {
